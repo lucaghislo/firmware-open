@@ -22,6 +22,7 @@ then
     gnat \
     mtools \
     nasm \
+    parted \
     python \
     python3-distutils \
     sdcc \
@@ -39,6 +40,7 @@ then
     libuuid-devel \
     mtools \
     nasm \
+    parted \
     patch \
     sdcc \
     zlib-devel
