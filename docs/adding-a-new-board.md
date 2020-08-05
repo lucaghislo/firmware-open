@@ -42,8 +42,9 @@ If planning to use System76 EC firmware, perform the following before running:
 ./scripts/generate.sh <model> <firmware.rom> [ec.rom]
 ```
 
-You will additionally need to generate the correct `microcode.rom` for the CPU
-family from the private [intel-microcode] repo.
+If the microcode blobs from coreboot will not be used, then `microcode.rom`
+must be generated for the correct CPU set from the private [intel-microcode]
+repo.
 
 ## Porting coreboot
 
