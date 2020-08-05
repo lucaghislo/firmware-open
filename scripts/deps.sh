@@ -57,6 +57,11 @@ git lfs pull
 msg "Initializing submodules"
 git submodule update --init --recursive
 
+msg "Installing coreboot commit hook"
+curl -sSf https://review.coreboot.org/tools/hooks/commit-msg \
+  -o .git/modules/coreboot/hooks/commit-msg && \
+  chmod +x .git/modules/coreboot/hooks/commit-msg
+
 msg "Installing Rust"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs \
   | sh -s -- -y --default-toolchain nightly
