@@ -12,16 +12,22 @@ if which apt-get > /dev/null
 then
   msg "Installing system build dependencies"
   sudo apt-get install \
+    avr-libc \
+    avrdude \
     build-essential \
     bison \
     ccache \
     curl \
     dosfstools \
+    flashrom \
     flex \
+    gcc-avr \
     git-lfs \
     gnat \
+    libncurses-dev \
     mtools \
     nasm \
+    parted \
     python \
     python3-distutils \
     sdcc \
@@ -32,13 +38,19 @@ then
   msg "Installing system build dependencies"
   sudo dnf group install c-development
   sudo dnf install \
+    avr-gcc \
+    avr-libc \
+    avrdude \
     curl \
     dosfstools \
+    flashrom \
     gcc-gnat \
     git-lfs \
     libuuid-devel \
     mtools \
     nasm \
+    ncurses-devel \
+    parted \
     patch \
     sdcc \
     zlib-devel
